@@ -1,0 +1,91 @@
+.imgContainerH {
+  width: 80%;
+  height: 30em;
+  overflow: hidden;
+  margin: 10em auto;
+  position: relative;
+  border-radius: 10px;
+}
+.containerH {
+  width: 100%;
+  background: rgb(81, 81, 143);
+  transform: translateY(0);
+  transition: transform 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.containerH:hover {
+  transform: translateY(-430px);
+}
+
+section:before {
+  content: "Excellence";
+  position: absolute;
+  left: 12%;
+  top: 0;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.sectionH {
+  padding: 1em 8em;
+}
+
+.sectionH:nth-last-of-type(2) {
+  background: rgb(43, 43, 77);
+}
+
+.warning {
+  color: yellow;
+}
+
+.h1H {
+  color: white;
+  font-size: 3rem;
+}
+.pH {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.cursH {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border-radius: 3em;
+  border: 4px solid white;
+  top: 2em;
+  left: 2em;
+  pointer-events: none;
+}
+
+.cursH,
+.cursH:before {
+  opacity: 0;
+}
+
+.imgContainerH:hover .cursH {
+  animation: move-cursor 1s ease-in-out;
+}
+
+@keyframes move-cursor {
+  0% {
+    height: 3em;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    height: 8em;
+  }
+
+  80% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5em);
+    height: 3em;
+  }
+}
